@@ -7,6 +7,10 @@ public class Dog extends Pet {
         super(name);
     }
 
+    public Dog(String name, String type){
+        super(name, type);
+    }
+
     @Override
     public String speak() {
         return "Woof";

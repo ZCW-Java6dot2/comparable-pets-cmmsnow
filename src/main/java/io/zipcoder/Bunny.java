@@ -7,6 +7,10 @@ public class Bunny extends Pet {
         super(name);
     }
 
+    public Bunny(String name, String type){
+        super(name, type);
+    }
+
     @Override
     public String speak() {
         return "Quiet sniff with nose twitches";

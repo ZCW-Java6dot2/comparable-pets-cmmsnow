@@ -30,13 +30,13 @@ public class Console {
             type = (getInput("What type is your pet: dog, cat, or bunny?  ")).toLowerCase();
             name = (getInput("Enter this pet's name:  "));
             if (type.equals("dog")){
-                Dog dog = new Dog(name);
+                Dog dog = new Dog(name, type);
                 newPets.add(dog);
             } else if (type.equals("cat")){
-                Cat cat = new Cat(name);
+                Cat cat = new Cat(name, type);
                 newPets.add(cat);
             } else if (type.equals("bunny")){
-                Bunny bunny = new Bunny(name);
+                Bunny bunny = new Bunny(name, type);
                 newPets.add(bunny);
             }
         }
