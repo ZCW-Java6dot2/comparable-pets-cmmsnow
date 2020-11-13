@@ -3,12 +3,14 @@ package io.zipcoder;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Collections;
+import java.util.Comparator;
 
 public class Console {
     private Scanner scan = new Scanner(System.in);
     private Integer numberOfPets;
     private String type;
     private String name;
+    private ArrayList<Pet> petsCoven = new ArrayList<Pet>();
 
     public String getInput(String prompt) {
         System.out.print(prompt);
@@ -22,7 +24,7 @@ public class Console {
         return numberOfPets;
     }
 
-    public ArrayList<Pet> getPets(Integer numberOfPets){
+    public ArrayList<Pet> getPetsInput(Integer numberOfPets){
         ArrayList<Pet> newPets = new ArrayList<Pet>();
         for (int i=0; i<numberOfPets; i++){
             type = (getInput("What type is your pet: dog, cat, or bunny?  ")).toLowerCase();
@@ -38,6 +40,7 @@ public class Console {
                 newPets.add(bunny);
             }
         }
+        this.petsCoven = newPets;
         return newPets;
     }
 
@@ -46,6 +49,10 @@ public class Console {
         for (Pet p : rPets){
             System.out.println("\n" + (p.getName()) + " says " + (p.speak()));
         }
+    }
+
+    public ArrayList<Pet> getPetsCoven(){
+        return this.petsCoven;
     }
 }
 

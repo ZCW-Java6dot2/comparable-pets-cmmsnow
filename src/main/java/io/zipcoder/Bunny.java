@@ -1,5 +1,7 @@
 package io.zipcoder;
 
+import java.lang.Comparable;
+
 public class Bunny extends Pet {
     public Bunny(String name){
         super(name);

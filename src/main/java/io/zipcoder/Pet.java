@@ -1,7 +1,10 @@
 package io.zipcoder;
 
+import java.lang.Comparable;
+import java.util.ArrayList;
+
 public class Pet {
-    String name;
+    private String name;
 
     public Pet(){}
 
