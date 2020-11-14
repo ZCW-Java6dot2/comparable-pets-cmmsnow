@@ -5,10 +5,7 @@ import java.lang.Comparable;
 public class Cat extends Pet {
     public Cat(String name){
         super(name);
-    }
-
-    public Cat(String name, String type){
-        super(name, type);
+        this.setType("cat");
     }
 
     @Override

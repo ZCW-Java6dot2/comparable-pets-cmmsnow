@@ -22,10 +22,35 @@ public class PetTest {
     }
 
     @Test
+    public void setTypeTest(){
+        Cat cat = new Cat("Booboo");
+        String newType = "bunny";
+        cat.setType(newType);
+        String actual = cat.getType();
+        Assert.assertEquals(newType, actual);
+    }
+
+    @Test
     public void speakTest(){
         Bunny bunny = new Bunny("Booboo");
         String expected = "Quiet sniff with nose twitches";
         String actual = bunny.speak();
         Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void compareToTest1(){
+        Cat cat1 = new Cat("Dexter");
+        Cat cat2 = new Cat("Toby");
+        int actual = cat1.compareTo(cat2);
+        Assert.assertTrue( actual < 0);
+    }
+
+    @Test
+    public void compareToTest2(){
+        Dog dog = new Dog("Dexter");
+        Cat cat = new Cat("Dexter");
+        int actual = dog.compareTo(cat);
+        Assert.assertTrue( actual > 0);
     }
 }

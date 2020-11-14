@@ -11,13 +11,13 @@ import java.util.Comparator;
 
 public class Sorter {
 
-    public static Comparator<Pet> petNameComparator = new Comparator<Pet>(){
+    /*public static Comparator<Pet> petNameComparator = new Comparator<Pet>(){
         Console console = new Console();
         ArrayList<Pet> pets = console.getPetsCoven();
 
         @Override
         public int compare(Pet o1, Pet o2) {
-            return 0;
+            return o1 - o2;
         }
     };
 
@@ -30,7 +30,13 @@ public class Sorter {
     };
 
 
-    /*public ArrayList<Pet> compareByType(ArrayList<Pet> input){
+
+
+    public int compare(Pet o1, Pet o2) {
+        return 0;
+    }
+
+    public ArrayList<Pet> compareByType(ArrayList<Pet> input){
         ArrayList<Pet> petsByType = new ArrayList<>();
         Pet pet1, pet2;
         for (int i = 0; i < input.size(); i++){
