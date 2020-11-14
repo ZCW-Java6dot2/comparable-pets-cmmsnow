@@ -3,6 +3,7 @@ package io.zipcoder;
 import junit.framework.TestCase;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,6 +18,7 @@ public class ConsoleTest extends TestCase {
         givenPets = new ArrayList<>(Arrays.asList(new Dog("Dexter"), new Cat("Dexter"), new Cat("Toby")));
     }
 
+    @Test
     public void testSortByType() {
         ArrayList<Pet> expected = new ArrayList<>(Arrays.asList(new Cat("Dexter"), new Cat("Toby"), new Dog("Dexter")));
         console.setPetsCoven(givenPets);
