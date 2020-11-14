@@ -51,8 +51,17 @@ public class Console {
         }
     }
 
+    public void setPetsCoven(ArrayList<Pet> petsCoven) {
+        this.petsCoven = petsCoven;
+    }
+
     public ArrayList<Pet> getPetsCoven(){
         return this.petsCoven;
+    }
+
+    public void sortByType(){
+        Comparator<Pet> comparator = Comparator.comparing(Pet::getType);
+        Collections.sort(getPetsCoven(), comparator);
     }
 }
 

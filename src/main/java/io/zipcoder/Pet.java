@@ -2,6 +2,7 @@ package io.zipcoder;
 
 import java.lang.Comparable;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Pet implements Comparable<Pet> {
     private String name;
@@ -36,5 +37,19 @@ public class Pet implements Comparable<Pet> {
     public int compareTo(Pet o) {
         int answer = this.name.compareTo(o.getName());
         return answer == 0 ? this.type.compareTo(o.getType()) : answer;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Pet pet = (Pet) o;
+        return Objects.equals(name, pet.name) &&
+                Objects.equals(type, pet.type);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, type);
     }
 }
